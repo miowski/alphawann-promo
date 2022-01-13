@@ -4,35 +4,65 @@
     <meta charset="UTF-8">
     <title>Alpha Wann</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.less">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Import fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Montserrat:ital,wght@1,900&display=swap"
           rel="stylesheet">
     <!-- Import icons -->
-    <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
     <!-- Import LessCSS -->
-    <link rel="stylesheet/less" type="text/css" href="assets/css/style.less" />
-    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
 </head>
-<body>
-<nav>
-    <h1>A.W</h1>
-    <ul>
-        <li>
-            <a href="#">Biographie ></a>
-        </li>
-        <li>
-            <a href="#">Discographie ></a>
-        </li>
-        <li>
-            <a href="https://www.instagram.com/alphawann"><i class="fi-xnsuxl-instagram"></i></a>
-        </li>
-    </ul>
+<body id="home">
+<nav class="light">
+    <div class="nav-bar">
+        <h1 onclick="location.href='index.html'">A.W</h1>
+        <div class="nav-toggle" onclick="document.documentElement.classList.toggle('menu-open')">
+            <div class="nav-toggle-bar"></div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menu-content">
+            <ul>
+                <li>
+                    <a href="#">Biographie ></a>
+                </li>
+                <li>
+                    <a href="#">Discographie ></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/alphawann"><i class="fi-xnsuxl-instagram"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
-<main></main>
-<footer>
+<main>
+    <div class="fs-section intro light">
+        <div class="section-text">
+            <p style="font-weight: 700">Le parcours d'</p>
+            <h1>Alpha
+                <br>Wann</h1>
+            <p>Un rappeur à la plume profonde et inégalable</p>
+            <button>
+                Découvrez >
+            </button>
+        </div>
+
+    </div>
+    <div class="fs-section light" id="home-discog">
+        <div class="section-text">
+            <p>Une grande diversité d'albums et de projets</p>
+            <img src="assets/img/discs.png" alt="Discographie : illustration">
+            <button>
+                Discographie >
+            </button>
+        </div>
+    </div>
+</main>
+<footer class="dark">
     <div>
         <h3>Découvrir</h3>
         <ul>
@@ -44,7 +74,7 @@
             </li>
         </ul>
     </div>
-    <div>
+    <div class="footer-socials">
         <h3>Nous suivre</h3>
         <ul>
             <li>
