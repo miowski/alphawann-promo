@@ -1,24 +1,5 @@
-# alphawann-promo
+# **⚠️ Utilise la version 4.5.15 de @vue/cli**
 
-## Project setup
-```
-npm install
-```
+# Alpha Wann - Promo
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Un site promotionnel pour le rappeur Alpha Wann. Réalisé à but d'évaluation de compétences durant un examen de deux jours.
