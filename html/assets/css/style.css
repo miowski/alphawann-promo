@@ -1,18 +1,56 @@
 body {
     margin: 0;
     transition: .2s;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
-.light, .light button {
+nav {
+    height: 6.25rem;
+}
+
+nav, .intro, #home-discog, footer, .timeline {
+    padding: 0 1rem;
+}
+
+nav .menu-open {
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 1.5rem;
+}
+
+.light, .light .button, .light a, .light p {
     color: #F2F2F2;
 }
 
-.dark a {
+.dark, .dark .button, .dark a, .dark p {
+    color: #202020;
+}
+
+.footer-dark {
+    background: #202020;
+}
+
+.footer-dark > * {
     color: #F2F2F2;
 }
 
-.intro {
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+#home div.intro.fs-section.light {
     background: url(../img/home-bgn-upscaled.jpg) no-repeat top -6.25rem center;
+    height: calc(100vh - 6.25rem);
+}
+
+#bio div.intro.fs-section.dark {
+    background: url(../img/bio-bgn-upscaled.jpg) no-repeat top -6.25rem center;
+    background-size: cover;
     height: calc(100vh - 6.25rem);
 }
 
@@ -26,12 +64,21 @@ body {
     flex-direction: column;
 }
 
+#home nav {
+    background: url(../img/home-bgn-upscaled.jpg) top;
+}
+
+#bio nav {
+    background: url(../img/bio-bgn-upscaled.jpg) top;
+    background-size: cover;
+}
+
 .section-text {
     position: relative;
     top: 30%;
 }
 
-button {
+.button {
     padding: 1.625rem 3.5rem;
     border: solid 2px #F2F2F2;
     border-radius: 0.625rem;
@@ -40,7 +87,7 @@ button {
     width: fit-content;
 }
 
-button:hover {
+.button:hover {
     background: rgba(255, 255, 255, 0.1);
     transition: .1s;
 }
@@ -52,7 +99,7 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
-a, p, li, button {
+a, p, li, .button {
     font-family: 'Manrope', sans-serif;
     font-size: 1.5rem;
 }
@@ -71,7 +118,7 @@ ul {
     list-style: none;
 }
 
-nav h1 {
+nav h1, footer h3 {
     font-size: 2.625rem;
 }
 
@@ -81,8 +128,8 @@ nav > ul > li {
 
 .nav-toggle {
     position: absolute;
-    right: 1.2rem;
-    top: 1.2rem;
+    right: 1rem;
+    top: 2rem;
     width: 2.55rem;
     height: 2.25rem;
     display: flex;
@@ -95,7 +142,7 @@ nav > ul > li {
 .nav-toggle-bar::before,
 .nav-toggle-bar::after {
     content: "";
-    background-color: #202020;
+    background-color: #F2F2F2;
     position: absolute;
     left: 0;
     width: 100%;
@@ -155,41 +202,28 @@ nav > ul > li {
     margin-bottom: 1rem;
 }
 
-.menu-content > ul > li > a {
-    color: #F2F2F2;
-}
-
-.menu-content > p {
-    color: #F2F2F2;
-}
-
-#home nav {
-    background: url(../img/home-bgn-upscaled.jpg);
-    background-position: top;
-}
-
 footer {
-    display: flex;
     background: #202020;
     color: #F2F2F2;
-    padding: 3rem;
 }
 
-footer > div {
-    width: 30%;
+footer h3 {
+    text-align: center;
 }
 
-.footer-socials {
+.footer-content {
     display: flex;
+    flex-direction: column;
+    padding: 3rem 1rem;
 }
 
 .footer-socials > ul {
-    display: block;
-    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 @media screen and (min-width: 768px) {
-    nav, .intro, #home-discog, footer {
+    nav, .intro, #home-discog, footer, .timeline {
         padding: 0 8.75rem;
     }
 
@@ -246,5 +280,20 @@ footer > div {
     #home-discog > div {
         max-width: 40%;
         float: right;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer-content > div {
+        width: 30%;
+        border-right: solid 2px #F2F2F2;
+        padding: 0 3rem;
+    }
+
+    .footer-content > div:nth-child(3) {
+        border: none;
     }
 }
